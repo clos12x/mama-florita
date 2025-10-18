@@ -1,0 +1,55 @@
+:root{
+  --bg:#fff7fa;
+  --card:#ffffff;
+  --ink:#2c2c2c;
+  --muted:#6a6a6a;
+  --brand:#e88db0;
+  --brandDark:#cc6a92;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:system-ui,Segoe UI,Roboto,Arial;
+  background:var(--bg); color:var(--ink);
+}
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 16px; background:var(--card); border-bottom:1px solid #eee;
+  position:sticky; top:0; z-index:10;
+}
+.topbar h1{margin:0; font-size:1.25rem}
+#btnInstall{background:var(--brand); color:white; border:0; padding:8px 12px; border-radius:10px; cursor:pointer}
+.container{max-width:900px; margin:16px auto; padding:0 12px}
+.card{
+  background:var(--card); border:1px solid #eee; border-radius:16px;
+  padding:16px 16px 10px 16px; margin-bottom:16px; box-shadow:0 4px 16px rgba(0,0,0,.04);
+}
+.lbl{display:block; font-size:.9rem; color:var(--muted); margin:8px 0 6px}
+textarea, input, select{
+  width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:12px; font-size:1rem; background:#fff;
+}
+.grid{display:grid; grid-template-columns:1fr 180px; gap:12px; margin-top:10px}
+.actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
+button{
+  background:var(--brand); color:white; border:0; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600
+}
+button.ghost{
+  background:#f5e3ea; color:#b5567b;
+}
+button.danger{ background:#ef5a7f }
+.hint{color:var(--muted); font-size:.85rem}
+.list{list-style:none; padding:0; margin:0}
+.item{
+  display:grid; grid-template-columns:1fr 160px 160px; gap:10px;
+  padding:10px 0; border-bottom:1px dashed #eee; align-items:center
+}
+.item small{color:var(--muted)}
+.badge{
+  display:inline-block; padding:4px 8px; background:#ffe6f0; color:#b12e61;
+  border-radius:999px; font-size:.75rem; margin-left:8px
+}
+.foot{padding:20px; text-align:center; color:#a07a8c}
+@media (max-width:700px){
+  .grid{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr; gap:6px}
+}

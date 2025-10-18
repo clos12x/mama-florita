@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mamá Florita – Recordatorios con voz</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="theme-color" content="#f7d8e1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>🌸 Mamá Florita</h1>
+    <button id="btnInstall" hidden>Instalar</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Nuevo recordatorio</h2>
+
+      <label class="lbl">Mensaje (puedes escribir o elegir uno sugerido):</label>
+      <textarea id="msg" rows="3" placeholder="Ej.: Hijito, respira y sigue con calma..."></textarea>
+
+      <label class="lbl">Sugeridos maternales:</label>
+      <select id="preset">
+        <option value="">— Elegir uno —</option>
+        <option>Mi cielo, tómate un respiro profundo conmigo.</option>
+        <option>Estoy orgullosa de ti, sigue paso a paso.</option>
+        <option>Hijito, deja el teléfono y toma agua, yo te acompaño.</option>
+        <option>Todo va a estar bien, vuelve a tu meta con calma.</option>
+        <option>Respira 4–4–4: inhala, sostén, exhala. Estoy contigo.</option>
+      </select>
+
+      <div class="grid">
+        <div>
+          <label class="lbl">Fecha y hora:</label>
+          <input id="when" type="datetime-local">
+        </div>
+        <div>
+          <label class="lbl">Repetir</label>
+          <select id="repeat">
+            <option value="none">No repetir</option>
+            <option value="daily">Diario</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="save">Guardar recordatorio</button>
+        <button id="testVoice" class="ghost">Probar voz</button>
+        <button id="askNoti" class="ghost">Permitir notificaciones</button>
+      </div>
+      <p class="hint">Consejo: Mantén la app abierta o en segundo plano para mayor fiabilidad de los avisos.</p>
+    </section>
+
+    <section class="card">
+      <h2>Tus recordatorios</h2>
+      <ul id="list" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">Hecho con cariño por Mamá Florita 🌸</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
