@@ -1,14 +1,20 @@
 {
   "name": "Mamá Florita – Recordatorios con voz",
   "short_name": "Mamá Florita",
-  "description": "Recordatorios suaves y maternales con voz en castellano y notificaciones.",
-  "start_url": ".",
+  "description": "Recordatorios suaves y maternales con voz en castellano y notificaciones personalizadas.",
+  "start_url": "index.html",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#fff7fa",
-  "theme_color": "#f7d8e1",
+  "orientation": "portrait",
+  "background_color": "#fff6f9",
+  "theme_color": "#f7b8c5",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
+
